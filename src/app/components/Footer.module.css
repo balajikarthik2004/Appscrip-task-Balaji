@@ -1,0 +1,177 @@
+.footer {
+    background-color: #0a0808;
+    color: #ffffff;
+    padding: 40px 50px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footerTop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .newsletter {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .newsletter h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .newsletter p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  
+  .contactInfo {
+    margin: 15px 0;
+  }
+  
+  .emailSignup {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .emailSignup input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .emailSignup button {
+    padding: 0 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .currencySelector {
+    min-width: 250px;
+  }
+  
+  .currencySelector label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .currencySelector select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .currencyNote {
+    font-size: 12px;
+    color: #857b7b;
+  }
+  
+  .footerMain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .footerColumn {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footerColumn h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .footerColumn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footerColumn ul li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .footerColumn ul li:hover {
+    text-decoration: underline;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .socialIcons a {
+    color: #dedede;
+    font-size: 20px;
+  }
+  
+  .paymentHeading {
+    margin-top: 25px;
+  }
+  
+  .paymentMethods {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .paymentMethods span {
+    font-size: 12px;
+    color: #333;
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .footerBottom {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  .footerLinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 12px;
+  }
+  
+  .footerLinks a {
+    color: #fdf4f4;
+  }
+  
+  .footerLinks a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .footerTop {
+      flex-direction: column;
+    }
+    
+    .footerMain {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
