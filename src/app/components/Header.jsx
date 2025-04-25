@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { FiSearch, FiHeart, FiShoppingCart, FiUser, FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
-import './header.css';
+import styles from './Header.module.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,20 +27,20 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
-      <div className="container">
-        <div className="main_nav">
+    <div className={styles.header}>
+      <div className={styles.container}>
+        <div className={styles.main_nav}>
           {/* Mobile menu button - only shows on mobile */}
           {isMobile && (
-            <button className="menu-toggle" onClick={toggleMenu}>
+            <button className={styles.menuToggle} onClick={toggleMenu}>
               {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
           )}
 
-          <h1 className="brand">KB</h1>
-          <h1 className="logo">LOGO</h1>
+          <h1 className={styles.brand}>KB</h1>
+          <h1 className={styles.logo}>LOGO</h1>
           
-          <div className="icons">
+          <div className={styles.icons}>
             <a href="#" aria-label="Search">
               <FiSearch size={20} />
             </a>
@@ -53,7 +53,7 @@ const Header = () => {
             <a href="#" aria-label="Account">
               <FiUser size={20} />
             </a>
-            <div className="language-selector">
+            <div className={styles.languageSelector}>
               <span>ENG</span>
               <FiChevronDown size={16} />
             </div>
@@ -62,13 +62,13 @@ const Header = () => {
 
         {/* Desktop Navigation - always visible on desktop, hidden on mobile */}
         {!isMobile && (
-          <div className="nav">
-            <ul>
-              <li><a href="#">SHOP</a></li>
-              <li><a href="#">SKILLS</a></li>
-              <li><a href="#">STORIES</a></li>
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">CONTACT US</a></li>
+          <div className={styles.nav}>
+            <ul className={styles.navList}>
+              <li className={styles.navItem}><a href="#">SHOP</a></li>
+              <li className={styles.navItem}><a href="#">SKILLS</a></li>
+              <li className={styles.navItem}><a href="#">STORIES</a></li>
+              <li className={styles.navItem}><a href="#">ABOUT</a></li>
+              <li className={styles.navItem}><a href="#">CONTACT US</a></li>
             </ul>
           </div>
         )}
@@ -76,27 +76,27 @@ const Header = () => {
         {/* Mobile Navigation - only shows when menu is open on mobile */}
         {isMobile && (
           <>
-            <div className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
-              <ul>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">SKILLS</a></li>
-                <li><a href="#">STORIES</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT US</a></li>
+            <div className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}>
+              <ul className={styles.mobileNavList}>
+                <li className={styles.mobileNavItem}><a href="#">SHOP</a></li>
+                <li className={styles.mobileNavItem}><a href="#">SKILLS</a></li>
+                <li className={styles.mobileNavItem}><a href="#">STORIES</a></li>
+                <li className={styles.mobileNavItem}><a href="#">ABOUT</a></li>
+                <li className={styles.mobileNavItem}><a href="#">CONTACT US</a></li>
               </ul>
             </div>
             {isMenuOpen && (
-              <div className="mobile-nav-overlay" onClick={toggleMenu}></div>
+              <div className={styles.mobileNavOverlay} onClick={toggleMenu}></div>
             )}
           </>
         )}
       </div>
 
-      <div className="header-content">
-        <hr className='hr'/>
+      <div className={styles.headerContent}>
+        <hr className={styles.hr}/>
         <h1>DISCOVER OUR PRODUCTS</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br /> Sint molestias exercitationem dignissimos dolores, explicabo pariatur fugiat.</p>
-        <hr className='hr' />
+        <hr className={styles.hr} />
       </div>
     </div>
   );

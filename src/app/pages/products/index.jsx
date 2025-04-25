@@ -279,7 +279,7 @@ const ProductsPage = () => {
           </div>
         </div>
       </div>
-
+    <hr />
       <div className={styles.container}>
         {/* Filters Section */}
         {showFilters && (
