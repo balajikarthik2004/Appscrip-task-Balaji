@@ -169,6 +169,20 @@
     .footerTop {
       flex-direction: column;
     }
+    .emailSignup{
+     
+      flex-direction: column;
+    }
+    .emailSignup input{
+      width: 250px;
+    }
+    .emailSignup button{
+      width: 250px;
+      padding: 10px 20px;
+    }
+    .currencySelector select{
+      width: 250px;
+    }
     
     .footerMain {
       flex-direction: column;
